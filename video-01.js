@@ -2,8 +2,8 @@
 function main()
 {
   video1.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4";
-  video1.width = 200;
   video1.height = 100;
+  video1.width = video1.height*(16/9);
   video1.onmouseover = () => {
     video1.muted=false;
   }
@@ -12,8 +12,8 @@ function main()
   }
 
   video2.src = "https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4";
-  video2.width = 200;
   video2.height = 100;
+  video2.width = video2.height*(16/9);
   video2.onmouseover = () => {
     video2.muted=false;
   }
@@ -22,8 +22,8 @@ function main()
   }
 
   video3.src = "https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4";
-  video3.width = 200;
   video3.height = 100;
+  video3.width = video3.height*(16/9);
   video3.onmouseover = () => {
     video3.muted=false;
   }
@@ -31,8 +31,9 @@ function main()
     video3.muted=true;
   }
 
-  videoF.width = 500;
   videoF.height = 250;
+  videoF.width = videoF.height*(16/9);
+  videoF.src = "test.mp4";
 
 
   play1 = document.getElementById('play1');
