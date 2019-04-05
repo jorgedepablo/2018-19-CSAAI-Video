@@ -38,6 +38,7 @@ function main()
   videoF.width = videoF.height*(16/9);
   videoF.src = "test.mp4";
 
+  clk = document.getElementById('clk');
 
   play1 = document.getElementById('play1');
   play2 = document.getElementById('play2');
@@ -80,4 +81,20 @@ function main()
           videoF.loop = true;
       }
   }
+
+  videoF.addEventListener("timeupdate",function(ev){
+      var time  = (videoF.currentTime);
+      var hours = Math.floor( time / 3600 );
+      var minutes = Math.floor( (time % 3600) / 60 );
+      var seconds = Math.floor(time % 60);
+
+       //Anteponiendo un 0 a los minutos si son menos de 10
+       hours = hours < 10 ? '0' + hours : hours;
+       minutes = minutes < 10 ? '0' + minutes : minutes;
+       seconds = seconds < 10 ? '0' + seconds : seconds;
+
+       var result = hours + ":" + minutes + ":" + seconds;  // 2:41:30
+       clk.innerHTML = result;
+
+ },true);
 }
