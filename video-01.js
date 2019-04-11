@@ -71,15 +71,27 @@ function main()
   }
 
   bucle.onclick = () => {
-      if (videoF.loop) {
-          videoF.loop = false;
+      if (bucle.style.border == '3px solid orange') {
           bucle.style.border = '0px';
+          init = 0;
+          finish = 0;
+          // Si se quita el bucle el video vuelve a sincro con los pequeños
+          if (video1.style.border == '3px solid orange'){
+            videoF.currentTime = video1.currentTime;
+          }
+          if (video2.style.border == '3px solid orange'){
+            videoF.currentTime = video2.currentTime;
+          }
+          if (video3.style.border == '3px solid orange'){
+            videoF.currentTime = video3.currentTime;
+          }
       } else {
+          init = new Number(document.getElementById("start").value);
+          finish = new Number(document.getElementById("end").value);
           bucle.style.border = '3px solid orange';
-          videoF.currentTime = 0;
-          videoF.play();
-          videoF.loop = true;
+          videoF.currentTime = init;
       }
+
   }
 
   videoF.addEventListener("timeupdate",function(ev){
@@ -88,13 +100,19 @@ function main()
       var minutes = Math.floor( (time % 3600) / 60 );
       var seconds = Math.floor(time % 60);
 
-       //Anteponiendo un 0 a los minutos si son menos de 10
-       hours = hours < 10 ? '0' + hours : hours;
-       minutes = minutes < 10 ? '0' + minutes : minutes;
-       seconds = seconds < 10 ? '0' + seconds : seconds;
+      //Anteponiendo un 0 a los minutos si son menos de 10
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
 
-       var result = hours + ":" + minutes + ":" + seconds;  // 2:41:30
-       clk.innerHTML = result;
+      var result = hours + ":" + minutes + ":" + seconds;
+      clk.innerHTML = result;
 
- },true);
+      //Hago lo del bucle
+      if (finish != 0){
+          if (videoF.currentTime > finish){
+              videoF.currentTime = init;
+          }
+      }
+  },true);
 }

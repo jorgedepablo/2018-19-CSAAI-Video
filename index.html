@@ -4,19 +4,24 @@
     <meta charset="utf-8">
     <title>Video 01</title>
     <script src="video-01.js"></script>
+    <link rel="stylesheet" href="video-01.css">
   </head>
   <body onload="main();">
-    <p id='clk'></p>
-    <video id="videoF" autoplay muted></video>
-    <br>
-    <button type="button" id="bucle">BUCLE</button>
-    <br>
-    <video id="video1" autoplay loop muted> </video>
-    <video id="video2" autoplay loop muted></video>
-    <video id="video3" autoplay loop muted></video>
-    <br>
-    <button type="button" id="play1">VER VIDEO</button>
-    <button type="button" id="play2">VER VIDEO</button>
-    <button type="button" id="play3">VER VIDEO</button>
+    <div id="content">
+        <p id='clk'></p>
+        <video id="videoF" autoplay loop muted></video>
+        <br>
+        <button type="button" id="bucle">BUCLE</button>
+         Start: <input type="text" value="" id="start">
+         End: <input type="text" value="" id="end">
+        <br>
+        <video id="video1" autoplay loop muted> </video>
+        <video id="video2" autoplay loop muted></video>
+        <video id="video3" autoplay loop muted></video>
+        <br>
+        <button type="button" id="play1">VER VIDEO</button>
+        <button type="button" id="play2">VER VIDEO</button>
+        <button type="button" id="play3">VER VIDEO</button>
+    </div>
   </body>
 </html>
