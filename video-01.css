@@ -1,11 +1,13 @@
 body{
     background-color: #1E1E29;
+    padding-top: 25px;
 }
 #content{
     background-color: #232332;
     width: 600px;
     margin: 0 auto;
     padding-top: 0.1px;
+    padding-bottom: 20px;
 }
 button{
     border: 1px solid ;
@@ -16,7 +18,7 @@ button{
     font-size: 1.2em;
     font-weight: normal;
     margin-left: 255px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 #clk{
     background-color: black;
@@ -41,5 +43,17 @@ button{
     font-size: 20px;
     font-weight: bolder;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+.video{
+    margin-left: 15px;
+}
+#play1{
+    margin-left: 52px;
+}
+#play2{
+    margin-left: 100px;
+}
+#play3{
+    margin-left: 80px;
 }
