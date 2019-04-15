@@ -35,7 +35,7 @@ button{
 }
 .input{
     border-radius: 5px;
-    border: 1px solid #39c;
+    border: 1px solid #F9A70F;
     background-color: #def;
     height: 25px;
     width: 60px;
@@ -49,11 +49,32 @@ button{
     margin-left: 15px;
 }
 #play1{
-    margin-left: 52px;
+    margin-left: 70px;
+    height: 35px;
+    width: 75px;
 }
 #play2{
-    margin-left: 100px;
+    margin-left: 115px;
+    height: 35px;
+    width: 75px;
+
 }
 #play3{
-    margin-left: 80px;
+    margin-left: 115px;
+    height: 35px;
+    width: 75px;
+}
+#st1{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 110px;
+    color: #F9B20F;
+}
+#en1{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 110px;
+    color: #F9B20F;
 }
