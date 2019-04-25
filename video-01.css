@@ -27,6 +27,7 @@ button{
     text-shadow:0px 0px 1px #fff;
     color:#fff;
     width: 160px;
+    padding-left: 5px;
     margin-left: 210px;
 }
 #videoF{
